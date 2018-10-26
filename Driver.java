@@ -25,5 +25,18 @@ public class Driver {
             System.exit(0);
         }
 
+        // Task3
+        if (input.equals("new")) {
+            System.out.println("Enter your fullname");
+            Scanner inputFullname = new Scanner(System.in);
+            String username = inputFullname.nextLine();
+            collector.setFullname(username);
+
+            System.out.println("Enter your email");
+            Scanner inputEmail = new Scanner(System.in);
+            String useremail = inputEmail.nextLine();
+            collector.setEmail(useremail);
+        }
+
     }
 }
