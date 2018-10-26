@@ -41,6 +41,5 @@ public class Driver {
             ContactList contactList = new ContactList();
             contactList.addContact(contact);
         }
-
     }
 }

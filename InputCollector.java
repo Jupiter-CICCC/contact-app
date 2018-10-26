@@ -14,6 +14,4 @@ public class InputCollector {
         this.promptString = input;
         return getPromptString();
     }
-
-
 }
