@@ -1,11 +1,12 @@
 package Contact_list;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Driver {
 
     public static void main(String[] args) {
-
         // Task1
         System.out.println("The menu:");
         System.out.println("What would you like to do next?");
@@ -18,7 +19,6 @@ public class Driver {
 
         InputCollector collector = new InputCollector();
         String input = collector.inputForPrompt(userInput);
-        System.out.println("Your input is: " + input);
 
         // Task2
         if (input.equals("quit")) {
@@ -30,12 +30,16 @@ public class Driver {
             System.out.println("Enter your fullname");
             Scanner inputFullname = new Scanner(System.in);
             String username = inputFullname.nextLine();
-            collector.setFullname(username);
+            String name = collector.inputForPrompt(username);
 
             System.out.println("Enter your email");
             Scanner inputEmail = new Scanner(System.in);
             String useremail = inputEmail.nextLine();
-            collector.setEmail(useremail);
+            String email = collector.inputForPrompt(useremail);
+
+            Contact contact = new Contact(name, email);
+            ContactList contactList = new ContactList();
+            contactList.addContact(contact);
         }
 
     }
