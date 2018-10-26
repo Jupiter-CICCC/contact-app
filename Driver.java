@@ -40,6 +40,8 @@ public class Driver {
             Contact contact = new Contact(name, email);
             ContactList contactList = new ContactList();
             contactList.addContact(contact);
+
+            contactList.printContactList();
         }
     }
 }

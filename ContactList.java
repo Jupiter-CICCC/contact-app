@@ -11,4 +11,10 @@ public class ContactList {
     public void addContact(Contact newContact) {
         contactLists.add(newContact);
     }
+
+    public void printContactList() {
+        for (Contact list : contactLists) {
+            System.out.println(contactLists.indexOf(list) +": <" + list.getFullname() + ">");
+        }
+    }
 }
